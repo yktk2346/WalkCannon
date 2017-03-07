@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: e959e28e530bda94280cfc7b32b490ab
+timeCreated: 1488716389
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - towerP: {instanceID: 0}
+  - fHP: {instanceID: 0}
+  - hP: {instanceID: 0}
+  - wTP: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
