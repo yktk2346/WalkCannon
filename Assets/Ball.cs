@@ -6,14 +6,6 @@ public class Ball : MonoBehaviour {
 
     Rigidbody rb;
     public float speed;
-
-   
-    //ヒット時にDestroyされるオブジェクトを入れる
-    GameObject enemy;
-    GameObject building1;
-    GameObject building2;
-    GameObject building3;
-    GameObject bossTower;
     
 
 
@@ -25,18 +17,6 @@ public class Ball : MonoBehaviour {
         force = this.gameObject.transform.forward * speed;
         rb = GetComponent<Rigidbody>();
         rb.AddForce(force);
-
-        //ヒット時にDestroyされるオブジェクトを取得
-        enemy = GameObject.Find("Enemy");
-        //if (enemy == null)
-        //{
-       //     Debug.Log("enemyがnullだよ");
-        //}
-        building1 = GameObject.Find("House1");
-        building2 = GameObject.Find("House2");
-        building3 = GameObject.Find("WatchTower");
-        bossTower = GameObject.Find("Tower");
-        //Debug.Log("ログは来ている");
 	}
 	
 	// Update is called once per frame
@@ -44,13 +24,12 @@ public class Ball : MonoBehaviour {
 		
 	}
 
+    //「other.gameObject.tag」＝「衝突したオブジェクト(相手)のタグ」
     void OnCollisionEnter(Collision other) {
-        Debug.Log(other.gameObject);
-        Destroy(gameObject);
-        Destroy(enemy);
-        Destroy(building1);
-        Destroy(building2);
-        Destroy(building3);
-        Destroy(bossTower);
+        Debug.Log(other.gameObject.name);
+        if (other.gameObject.tag == "EnemyTag") {
+            Destroy(other.gameObject);
+        }
+        Destroy(this.gameObject);
     }
 }

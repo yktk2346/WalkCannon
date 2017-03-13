@@ -61,6 +61,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1423004132264706
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4839062464601272}
+  m_Layer: 0
+  m_Name: TowerMuzzle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1435640868684424
 GameObject:
   m_ObjectHideFlags: 0
@@ -120,9 +135,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4600225468031598}
   - component: {fileID: 65634978087555934}
+  - component: {fileID: 114572645010968966}
+  - component: {fileID: 114326099695686588}
   m_Layer: 0
   m_Name: Tower
-  m_TagString: Untagged
+  m_TagString: TowerTag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -205,11 +222,12 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1925059323611824}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 6, y: 0, z: 10}
+  m_LocalPosition: {x: -0.44, y: 0, z: 10}
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children:
   - {fileID: 4832697055577980}
   - {fileID: 4421371953104096}
+  - {fileID: 4839062464601272}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
@@ -254,6 +272,19 @@ Transform:
   - {fileID: 4594899747426198}
   m_Father: {fileID: 4600225468031598}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4839062464601272
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1423004132264706}
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
+  m_LocalPosition: {x: 0.015, y: 7.696, z: 3.278}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_Children: []
+  m_Father: {fileID: 4600225468031598}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23091568969453202
 MeshRenderer:
@@ -491,3 +522,29 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114326099695686588
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1925059323611824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7c3f5d9461ad7a41ae0ba9f0fd50a97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerBall: {fileID: 1770483484636260, guid: 6456c0324be26194cbcf371d4daef6c1, type: 2}
+  towerMuzzle: {fileID: 4945848426370834, guid: 52a745be57a86ec4695865ef78e95b12,
+    type: 2}
+--- !u!114 &114572645010968966
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1925059323611824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b250bfef47e7a9942a10f249f506b35d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HP: 5

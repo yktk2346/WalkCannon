@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 54697382435643230}
   m_Layer: 9
   m_Name: BallPrefab
-  m_TagString: Untagged
+  m_TagString: Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -109,11 +109,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2000
-  enemy: {fileID: 1245794014021924, guid: 64ddb926de802d94d96464bf85fd8bee, type: 2}
-  building1: {fileID: 1230484631260734, guid: 603477078775db145b45adac6eae33d0, type: 2}
-  building2: {fileID: 1434187736627272, guid: 66033ab09b3545f40ae6da14cdf1ccdb, type: 2}
-  building3: {fileID: 1359101244122586, guid: 44a249cd805130647b99313f6d870f4b, type: 2}
-  bossTower: {fileID: 1925059323611824, guid: 6618991f10e38dc4e9ca388344207b32, type: 2}
 --- !u!135 &135435039137262550
 SphereCollider:
   m_ObjectHideFlags: 1
